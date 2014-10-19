@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: public-bookmarks-rails_development
+  host: localhost
+  username: postgres
+  password: root

@@ -1,0 +1,34 @@
+<h1>Listing public_bookmarks</h1>
+
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Url</th>
+      <th>Description</th>
+      <th>Submitter email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @public_bookmarks.each do |public_bookmark| %>
+      <tr>
+        <td><%= public_bookmark.title %></td>
+        <td><%= public_bookmark.url %></td>
+        <td><%= public_bookmark.description %></td>
+        <td><%= public_bookmark.submitter_email %></td>
+        <td><%= link_to 'Show', public_bookmark %></td>
+        <% if @authenticated %>
+          <td><%= link_to 'Destroy', public_bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Public bookmark', new_public_bookmark_path %>

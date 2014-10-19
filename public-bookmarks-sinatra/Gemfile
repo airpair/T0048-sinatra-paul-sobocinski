@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'sinatra-activerecord'
+gem 'pg'
+gem 'rake'
+gem 'rack-flash3'
+ruby '2.1.2'
